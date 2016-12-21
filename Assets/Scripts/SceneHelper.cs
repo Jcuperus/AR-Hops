@@ -25,8 +25,7 @@ public class SceneHelper : MonoBehaviour {
         {
             if (textReference != null)
             {
-                textReference.text = "Loading " + ao.progress + "%";
-                Debug.Log(textReference.text);
+                textReference.text = "Loading " + (ao.progress * 100) + "%";
             }
             yield return 0;
         }
