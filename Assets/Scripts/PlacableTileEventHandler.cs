@@ -10,7 +10,7 @@ public class PlacableTileEventHandler : MonoBehaviour, ITrackableEventHandler {
 
     void Start() {
         mTrackableBehaviour = GetComponent<TrackableBehaviour>();
-        tileBehaviour = GetComponentInChildren<PlacableTileBehaviour>();
+        tileBehaviour = GetComponent<PlacableTileBehaviour>();
         if (mTrackableBehaviour) {
             mTrackableBehaviour.RegisterTrackableEventHandler(this);
         }
@@ -33,13 +33,13 @@ public class PlacableTileEventHandler : MonoBehaviour, ITrackableEventHandler {
     }
 
     private void OnTrackingFound() {
-        Renderer[] rendererComponents = GetComponentsInChildren<Renderer>(true);
-        Collider[] colliderComponents = GetComponentsInChildren<Collider>(true);
+        //Renderer[] rendererComponents = GetComponentsInChildren<Renderer>(true);
+        //Collider[] colliderComponents = GetComponentsInChildren<Collider>(true);
 
-        // Enable rendering:
-        foreach (Renderer component in rendererComponents) {
-            component.enabled = true;
-        }
+        //// Enable rendering:
+        //foreach (Renderer component in rendererComponents) {
+        //    component.enabled = true;
+        //}
 
         tileBehaviour.setSelected(true);
 
