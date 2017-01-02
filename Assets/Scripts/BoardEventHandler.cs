@@ -31,17 +31,17 @@ public class BoardEventHandler : MonoBehaviour, ITrackableEventHandler {
 
     private void OnTrackingFound() {
         Renderer[] rendererComponents = GetComponentsInChildren<Renderer>(true);
-        Collider[] colliderComponents = GetComponentsInChildren<Collider>(true);
+        //Collider[] colliderComponents = GetComponentsInChildren<Collider>(true);
 
         // Enable rendering:
         foreach (Renderer component in rendererComponents) {
             component.enabled = true;
         }
 
-        // Enable colliders:
-        foreach (Collider component in colliderComponents) {
-            component.enabled = true;
-        }
+        //// Enable colliders:
+        //foreach (Collider component in colliderComponents) {
+        //    component.enabled = true;
+        //}
 
         //Show all tiles
         foreach (GameObject tile in tiles) {
@@ -53,17 +53,17 @@ public class BoardEventHandler : MonoBehaviour, ITrackableEventHandler {
 
     private void OnTrackingLost() {
         Renderer[] rendererComponents = GetComponentsInChildren<Renderer>(true);
-        Collider[] colliderComponents = GetComponentsInChildren<Collider>(true);
+        //Collider[] colliderComponents = GetComponentsInChildren<Collider>(true);
 
         // Disable rendering:
         foreach (Renderer component in rendererComponents) {
             component.enabled = false;
         }
 
-        // Disable colliders:
-        foreach (Collider component in colliderComponents) {
-            component.enabled = false;
-        }
+        //// Disable colliders:
+        //foreach (Collider component in colliderComponents) {
+        //    component.enabled = false;
+        //}
 
         //Hide all tiles
         foreach (GameObject tile in tiles) {
