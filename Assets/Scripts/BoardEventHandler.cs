@@ -5,10 +5,14 @@ using Vuforia;
 public class BoardEventHandler : MonoBehaviour, ITrackableEventHandler {
     private TrackableBehaviour mTrackableBehaviour;
     private GameObject[] tiles;
+    private InfiniteRunnerController playerController;
 
     void Start() {
         mTrackableBehaviour = GetComponent<TrackableBehaviour>();
         tiles = GameObject.FindGameObjectsWithTag("Tile");
+        playerController = GameObject.Find("Player").GetComponent<InfiniteRunnerController>();
+
+        Debug.Log("pc: " + playerController);
         if (mTrackableBehaviour) {
             mTrackableBehaviour.RegisterTrackableEventHandler(this);
         }
@@ -19,6 +23,7 @@ public class BoardEventHandler : MonoBehaviour, ITrackableEventHandler {
     /// tracking state changes.
     /// </summary>
     public void OnTrackableStateChanged(TrackableBehaviour.Status previousStatus, TrackableBehaviour.Status newStatus) {
+        print("status changed: " + newStatus);
         if (newStatus == TrackableBehaviour.Status.DETECTED ||
             newStatus == TrackableBehaviour.Status.TRACKED ||
             newStatus == TrackableBehaviour.Status.EXTENDED_TRACKED) {
@@ -48,6 +53,8 @@ public class BoardEventHandler : MonoBehaviour, ITrackableEventHandler {
             tile.GetComponent<PlacableTileBehaviour>().setRendering(true);
         }
 
+        playerController.setIsRunning(true);
+
         Debug.Log("Trackable " + mTrackableBehaviour.TrackableName + " found");
     }
 
@@ -69,6 +76,8 @@ public class BoardEventHandler : MonoBehaviour, ITrackableEventHandler {
         foreach (GameObject tile in tiles) {
             tile.GetComponent<PlacableTileBehaviour>().setRendering(false);
         }
+
+        playerController.setIsRunning(false);
 
         Debug.Log("Trackable " + mTrackableBehaviour.TrackableName + " lost");
     }

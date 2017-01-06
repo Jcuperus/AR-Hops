@@ -21,7 +21,6 @@ GameObject:
   - component: {fileID: 4626201548594784}
   - component: {fileID: 33584434550004744}
   - component: {fileID: 23368379147418400}
-  - component: {fileID: 95357242100397678}
   - component: {fileID: 65787125732096346}
   m_Layer: 0
   m_Name: Tile_straight
@@ -91,22 +90,5 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 0.70507175, y: 0.053118903, z: 1.0200007}
-  m_Center: {x: 0.0023670197, y: 0.026559353, z: 0}
---- !u!95 &95357242100397678
-Animator:
-  serializedVersion: 3
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1045602500692520}
-  m_Enabled: 1
-  m_Avatar: {fileID: 9000000, guid: 708217082433c6a44a22abafbef1c474, type: 3}
-  m_Controller: {fileID: 0}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
+  m_Size: {x: 1, y: 0.05, z: 1}
+  m_Center: {x: 0, y: 0.0275, z: 0}
