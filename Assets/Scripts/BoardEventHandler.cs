@@ -48,12 +48,14 @@ public class BoardEventHandler : MonoBehaviour, ITrackableEventHandler {
         //    component.enabled = true;
         //}
 
+        //TODO: show placed tiles only
         //Show all tiles
-        foreach (GameObject tile in tiles) {
+        foreach (GameObject tile in tiles)
+        {
             tile.GetComponent<PlacableTileBehaviour>().setRendering(true);
         }
 
-        playerController.setIsRunning(true);
+        //playerController.setIsRunning(true);
 
         Debug.Log("Trackable " + mTrackableBehaviour.TrackableName + " found");
     }

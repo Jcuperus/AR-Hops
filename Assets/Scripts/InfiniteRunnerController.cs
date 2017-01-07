@@ -31,7 +31,6 @@ public class InfiniteRunnerController : MonoBehaviour {
 
         if (isRunning)
         {
-            print("isrunning: " + isRunning);
             //Applying gravity to the controller
             moveDirection.y -= gravity * Time.deltaTime;
             //Making the character move
@@ -54,7 +53,6 @@ public class InfiniteRunnerController : MonoBehaviour {
 
     public void setIsRunning(bool isRunning)
     {
-        print("set running: " + isRunning);
         this.isRunning = isRunning;
     }
 }

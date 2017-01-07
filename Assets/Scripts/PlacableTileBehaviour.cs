@@ -36,7 +36,6 @@ public class PlacableTileBehaviour : MonoBehaviour {
             //Debug.DrawRay(camera.position, camera.forward, Color.red, 2, true);
             var layerMask = 1 << layerIndex;
             if (Physics.Raycast(camera.position, camera.forward, out hitInfo, 500, layerMask)) {
-                Debug.Log("Cast hit on: " + hitInfo.point);
                 //Set gameobject location
                 setRendering(true);
                 gameObject.transform.position = roundVector(hitInfo.point);
@@ -54,7 +53,8 @@ public class PlacableTileBehaviour : MonoBehaviour {
     }
 
     private Vector3 roundVector(Vector3 vector) {
-        int roundFactor = 10;
+        int roundFactor = 2;
+        Debug.Log("Rounded vector: " + new Vector3(Mathf.Round(vector.x / roundFactor) * roundFactor, Mathf.Round(vector.y / roundFactor) * roundFactor * roundFactor));
         return new Vector3(Mathf.Round(vector.x / roundFactor) * roundFactor, Mathf.Round(vector.y / roundFactor) * roundFactor * roundFactor);
     }
 
