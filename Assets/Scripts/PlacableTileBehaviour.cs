@@ -30,6 +30,7 @@ public class PlacableTileBehaviour : MonoBehaviour {
                 setRendering(true);
                 //transform.GetChild(0).transform.position = roundVector(hitInfo.point);
                 gameObject.transform.position = roundVector(hitInfo.point);
+                gameObject.transform.rotation = Quaternion.Euler(0, 90, 0);
                 //Round vectors to snap to grid
             }
             else {
