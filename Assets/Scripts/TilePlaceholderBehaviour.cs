@@ -4,14 +4,12 @@ using UnityEngine;
 
 public class TilePlaceholderBehaviour : MonoBehaviour {
 
-    private void OnTriggerEnter(Collider other)
+    private void OnTriggerStay(Collider other)
     {
         if (other.gameObject.CompareTag("Placable"))
         {
             Renderer[] rendererComponents = GetComponentsInChildren<Renderer>(true);
             Collider[] colliderComponents = GetComponentsInChildren<Collider>(true);
-
-            print("trigger enter: " + other);
 
             // Disable rendering:
             foreach (Renderer component in rendererComponents)
@@ -36,8 +34,6 @@ public class TilePlaceholderBehaviour : MonoBehaviour {
         {
             Renderer[] rendererComponents = GetComponentsInChildren<Renderer>(true);
             Collider[] colliderComponents = GetComponentsInChildren<Collider>(true);
-
-            print("trigger exit: " + other);
 
             // Enable rendering:
             foreach (Renderer component in rendererComponents)

@@ -28,10 +28,10 @@ public class PlacableTileBehaviour : MonoBehaviour {
             if (Physics.Raycast(camera.position, camera.forward, out hitInfo, 500, layerMask)) {
                 //Set gameobject location
                 setRendering(true);
-                //transform.GetChild(0).transform.position = roundVector(hitInfo.point);
+
+                //Round vectors to snap to grid
                 gameObject.transform.position = roundVector(hitInfo.point);
                 gameObject.transform.rotation = Quaternion.Euler(0, 90, 0);
-                //Round vectors to snap to grid
             }
             else {
                 setRendering(false);
@@ -46,7 +46,7 @@ public class PlacableTileBehaviour : MonoBehaviour {
 
     private Vector3 roundVector(Vector3 vector) {
         int roundFactor = 2;
-        return new Vector3(Mathf.Round(vector.x / roundFactor) * roundFactor, Mathf.Round(vector.y / roundFactor) * roundFactor * roundFactor);
+        return new Vector3(Mathf.Round(vector.x / roundFactor) * roundFactor, Mathf.Round(vector.y / roundFactor) * roundFactor);
     }
 
     public void setSelected(bool boolean) {
