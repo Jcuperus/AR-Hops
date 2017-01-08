@@ -9,10 +9,9 @@ public class BoardEventHandler : MonoBehaviour, ITrackableEventHandler {
 
     void Start() {
         mTrackableBehaviour = GetComponent<TrackableBehaviour>();
-        tiles = GameObject.FindGameObjectsWithTag("Tile");
+        tiles = GameObject.FindGameObjectsWithTag("TileTarget");
         playerController = GameObject.Find("Player").GetComponent<InfiniteRunnerController>();
-
-        Debug.Log("pc: " + playerController);
+        
         if (mTrackableBehaviour) {
             mTrackableBehaviour.RegisterTrackableEventHandler(this);
         }
@@ -36,17 +35,11 @@ public class BoardEventHandler : MonoBehaviour, ITrackableEventHandler {
 
     private void OnTrackingFound() {
         Renderer[] rendererComponents = GetComponentsInChildren<Renderer>(true);
-        //Collider[] colliderComponents = GetComponentsInChildren<Collider>(true);
 
         // Enable rendering:
         foreach (Renderer component in rendererComponents) {
             component.enabled = true;
         }
-
-        //// Enable colliders:
-        //foreach (Collider component in colliderComponents) {
-        //    component.enabled = true;
-        //}
 
         //TODO: show placed tiles only
         //Show all tiles
@@ -55,6 +48,7 @@ public class BoardEventHandler : MonoBehaviour, ITrackableEventHandler {
             tile.GetComponent<PlacableTileBehaviour>().setRendering(true);
         }
 
+        //TODO: suspend game when target lost
         //playerController.setIsRunning(true);
 
         Debug.Log("Trackable " + mTrackableBehaviour.TrackableName + " found");
@@ -62,24 +56,19 @@ public class BoardEventHandler : MonoBehaviour, ITrackableEventHandler {
 
     private void OnTrackingLost() {
         Renderer[] rendererComponents = GetComponentsInChildren<Renderer>(true);
-        //Collider[] colliderComponents = GetComponentsInChildren<Collider>(true);
 
         // Disable rendering:
         foreach (Renderer component in rendererComponents) {
             component.enabled = false;
         }
 
-        //// Disable colliders:
-        //foreach (Collider component in colliderComponents) {
-        //    component.enabled = false;
-        //}
-
         //Hide all tiles
         foreach (GameObject tile in tiles) {
             tile.GetComponent<PlacableTileBehaviour>().setRendering(false);
         }
 
-        playerController.setIsRunning(false);
+        //TODO: suspend game when target lost
+        //playerController.setIsRunning(false);
 
         Debug.Log("Trackable " + mTrackableBehaviour.TrackableName + " lost");
     }

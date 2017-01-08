@@ -13,21 +13,11 @@ public class PlacableTileBehaviour : MonoBehaviour {
         layerIndex = LayerMask.NameToLayer("Board");
         gameManager = GameObject.Find("Managers").GetComponent<GameManager>();
         setRendering(false);
-        //InvokeRepeating("castRay", 0, 0.1f);
 	}
 	
 	// Update is called once per frame
 	void Update () {
         castRay();
-        //if (isSelected) {
-        //    castRay();
-        //}
-
-        //if (isSelected) {
-        //    //Raycast from camera middle
-        //    //If hit with board label show asset on hit collission location
-        //    gameObject.transform.position = Camera.main.transform.position;
-        //}
     }
 
     void castRay() {
@@ -38,6 +28,7 @@ public class PlacableTileBehaviour : MonoBehaviour {
             if (Physics.Raycast(camera.position, camera.forward, out hitInfo, 500, layerMask)) {
                 //Set gameobject location
                 setRendering(true);
+                //transform.GetChild(0).transform.position = roundVector(hitInfo.point);
                 gameObject.transform.position = roundVector(hitInfo.point);
                 //Round vectors to snap to grid
             }
@@ -54,7 +45,6 @@ public class PlacableTileBehaviour : MonoBehaviour {
 
     private Vector3 roundVector(Vector3 vector) {
         int roundFactor = 2;
-        Debug.Log("Rounded vector: " + new Vector3(Mathf.Round(vector.x / roundFactor) * roundFactor, Mathf.Round(vector.y / roundFactor) * roundFactor * roundFactor));
         return new Vector3(Mathf.Round(vector.x / roundFactor) * roundFactor, Mathf.Round(vector.y / roundFactor) * roundFactor * roundFactor);
     }
 

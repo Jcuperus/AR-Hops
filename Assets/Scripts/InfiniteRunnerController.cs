@@ -55,4 +55,13 @@ public class InfiniteRunnerController : MonoBehaviour {
     {
         this.isRunning = isRunning;
     }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.gameObject.CompareTag("Hazard"))
+        {
+            setIsRunning(false);
+            print("Game over");
+        }
+    }
 }

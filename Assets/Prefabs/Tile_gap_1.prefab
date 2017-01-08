@@ -26,7 +26,7 @@ GameObject:
   - component: {fileID: 65337604257381644}
   m_Layer: 0
   m_Name: Tile_gap_1
-  m_TagString: Tile
+  m_TagString: Placable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -107,8 +107,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 0.7050718, y: 0.05218799, z: 0.1423872}
-  m_Center: {x: 0, y: -0.01148844, z: -0.4388084}
+  m_Size: {x: 1, y: 0.05, z: 0.1423872}
+  m_Center: {x: 0, y: 0.0275, z: -0.4388084}
 --- !u!65 &65626427371229332
 BoxCollider:
   m_ObjectHideFlags: 1
@@ -119,5 +119,5 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 0.7050718, y: 0.052187987, z: 0.14238715}
-  m_Center: {x: 0, y: -0.011488438, z: 0.43880844}
+  m_Size: {x: 1, y: 0.05, z: 0.14238715}
+  m_Center: {x: 0, y: 0.0275, z: 0.43880844}
