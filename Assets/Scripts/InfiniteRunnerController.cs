@@ -1,11 +1,14 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class InfiniteRunnerController : MonoBehaviour {
     private CharacterController controller;
     private Vector3 moveDirection = Vector3.right;
     private bool isRunning = false;
+    private Vector3 startPosition;
+    private GameObject gameOverPanel;
 
     public float speed = 1;
     public float jumpSpeed = 2;
@@ -13,7 +16,10 @@ public class InfiniteRunnerController : MonoBehaviour {
 
     // Use this for initialization
     void Start () {
+        gameOverPanel = GameObject.Find("GameOverPanel");
+        gameOverPanel.SetActive(false);
         controller = gameObject.GetComponent<CharacterController>();
+        startPosition = transform.position;
         startRunning();
 	}
 
@@ -56,12 +62,24 @@ public class InfiniteRunnerController : MonoBehaviour {
         this.isRunning = isRunning;
     }
 
+    public void restart()
+    {
+        gameOverPanel.SetActive(false);
+        transform.position = startPosition;
+        setIsRunning(true);
+    }
+
     private void OnTriggerEnter(Collider other)
     {
         if (other.gameObject.CompareTag("Hazard"))
         {
             setIsRunning(false);
+            gameOverPanel.SetActive(true);
             print("Game over");
+        }
+        if (other.gameObject.CompareTag("Finish"))
+        {
+            SceneManager.LoadScene("VictoryScene");
         }
     }
 }
