@@ -1,0 +1,530 @@
+fileFormatVersion: 2
+guid: 9eaf189b17f4e4a4f91aec651a4a712d
+timeCreated: 1483964939
+licenseType: Free
+ModelImporter:
+  serializedVersion: 19
+  fileIDToRecycleName:
+    100000: //RootNode
+    100002: CATRigBody
+    100004: CATRigLArm1
+    100006: CATRigLArm2
+    100008: CATRigLArmPalm
+    100010: CATRigLLeg1
+    100012: CATRigLLeg2
+    100014: CATRigLLegAnkle
+    100016: CATRigPalmBone001
+    100018: CATRigPalmBone001 1
+    100020: CATRigPalmBone002
+    100022: CATRigPalmBone002 1
+    100024: CATRigRArm1
+    100026: CATRigRArm2
+    100028: CATRigRArmPalm
+    100030: CATRigRLeg1
+    100032: CATRigRLeg2
+    100034: CATRigRLegAnkle
+    100036: Sphere001
+    400000: //RootNode
+    400002: CATRigBody
+    400004: CATRigLArm1
+    400006: CATRigLArm2
+    400008: CATRigLArmPalm
+    400010: CATRigLLeg1
+    400012: CATRigLLeg2
+    400014: CATRigLLegAnkle
+    400016: CATRigPalmBone001
+    400018: CATRigPalmBone001 1
+    400020: CATRigPalmBone002
+    400022: CATRigPalmBone002 1
+    400024: CATRigRArm1
+    400026: CATRigRArm2
+    400028: CATRigRArmPalm
+    400030: CATRigRLeg1
+    400032: CATRigRLeg2
+    400034: CATRigRLegAnkle
+    400036: Sphere001
+    4300000: Sphere001
+    7400000: Walking
+    7400002: JumpStart
+    7400004: JumpingUp
+    7400006: FallingAndLand
+    7400008: Death
+    7400010: Idle
+    9500000: //RootNode
+    13700000: Sphere001
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations:
+    - serializedVersion: 16
+      name: Walking
+      takeName: BeepBoop
+      firstFrame: 0
+      lastFrame: 20
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: CATRigBody
+        weight: 1
+      - path: CATRigBody/CATRigLArm1
+        weight: 1
+      - path: CATRigBody/CATRigLArm1/CATRigLArm2
+        weight: 1
+      - path: CATRigBody/CATRigLArm1/CATRigLArm2/CATRigLArmPalm
+        weight: 1
+      - path: CATRigBody/CATRigLArm1/CATRigLArm2/CATRigLArmPalm/CATRigPalmBone001
+        weight: 1
+      - path: CATRigBody/CATRigLArm1/CATRigLArm2/CATRigLArmPalm/CATRigPalmBone002
+        weight: 1
+      - path: CATRigBody/CATRigLLeg1
+        weight: 1
+      - path: CATRigBody/CATRigLLeg1/CATRigLLeg2
+        weight: 1
+      - path: CATRigBody/CATRigLLeg1/CATRigLLeg2/CATRigLLegAnkle
+        weight: 1
+      - path: CATRigBody/CATRigRArm1
+        weight: 1
+      - path: CATRigBody/CATRigRArm1/CATRigRArm2
+        weight: 1
+      - path: CATRigBody/CATRigRArm1/CATRigRArm2/CATRigRArmPalm
+        weight: 1
+      - path: CATRigBody/CATRigRArm1/CATRigRArm2/CATRigRArmPalm/CATRigPalmBone001
+          1
+        weight: 1
+      - path: CATRigBody/CATRigRArm1/CATRigRArm2/CATRigRArmPalm/CATRigPalmBone002
+          1
+        weight: 1
+      - path: CATRigBody/CATRigRLeg1
+        weight: 1
+      - path: CATRigBody/CATRigRLeg1/CATRigRLeg2
+        weight: 1
+      - path: CATRigBody/CATRigRLeg1/CATRigRLeg2/CATRigRLegAnkle
+        weight: 1
+      - path: Sphere001
+        weight: 1
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: JumpStart
+      takeName: BeepBoop
+      firstFrame: 40
+      lastFrame: 57
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: CATRigBody
+        weight: 1
+      - path: CATRigBody/CATRigLArm1
+        weight: 1
+      - path: CATRigBody/CATRigLArm1/CATRigLArm2
+        weight: 1
+      - path: CATRigBody/CATRigLArm1/CATRigLArm2/CATRigLArmPalm
+        weight: 1
+      - path: CATRigBody/CATRigLArm1/CATRigLArm2/CATRigLArmPalm/CATRigPalmBone001
+        weight: 1
+      - path: CATRigBody/CATRigLArm1/CATRigLArm2/CATRigLArmPalm/CATRigPalmBone002
+        weight: 1
+      - path: CATRigBody/CATRigLLeg1
+        weight: 1
+      - path: CATRigBody/CATRigLLeg1/CATRigLLeg2
+        weight: 1
+      - path: CATRigBody/CATRigLLeg1/CATRigLLeg2/CATRigLLegAnkle
+        weight: 1
+      - path: CATRigBody/CATRigRArm1
+        weight: 1
+      - path: CATRigBody/CATRigRArm1/CATRigRArm2
+        weight: 1
+      - path: CATRigBody/CATRigRArm1/CATRigRArm2/CATRigRArmPalm
+        weight: 1
+      - path: CATRigBody/CATRigRArm1/CATRigRArm2/CATRigRArmPalm/CATRigPalmBone001
+          1
+        weight: 1
+      - path: CATRigBody/CATRigRArm1/CATRigRArm2/CATRigRArmPalm/CATRigPalmBone002
+          1
+        weight: 1
+      - path: CATRigBody/CATRigRLeg1
+        weight: 1
+      - path: CATRigBody/CATRigRLeg1/CATRigRLeg2
+        weight: 1
+      - path: CATRigBody/CATRigRLeg1/CATRigRLeg2/CATRigRLegAnkle
+        weight: 1
+      - path: Sphere001
+        weight: 1
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: JumpingUp
+      takeName: BeepBoop
+      firstFrame: 57
+      lastFrame: 80
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: CATRigBody
+        weight: 1
+      - path: CATRigBody/CATRigLArm1
+        weight: 1
+      - path: CATRigBody/CATRigLArm1/CATRigLArm2
+        weight: 1
+      - path: CATRigBody/CATRigLArm1/CATRigLArm2/CATRigLArmPalm
+        weight: 1
+      - path: CATRigBody/CATRigLArm1/CATRigLArm2/CATRigLArmPalm/CATRigPalmBone001
+        weight: 1
+      - path: CATRigBody/CATRigLArm1/CATRigLArm2/CATRigLArmPalm/CATRigPalmBone002
+        weight: 1
+      - path: CATRigBody/CATRigLLeg1
+        weight: 1
+      - path: CATRigBody/CATRigLLeg1/CATRigLLeg2
+        weight: 1
+      - path: CATRigBody/CATRigLLeg1/CATRigLLeg2/CATRigLLegAnkle
+        weight: 1
+      - path: CATRigBody/CATRigRArm1
+        weight: 1
+      - path: CATRigBody/CATRigRArm1/CATRigRArm2
+        weight: 1
+      - path: CATRigBody/CATRigRArm1/CATRigRArm2/CATRigRArmPalm
+        weight: 1
+      - path: CATRigBody/CATRigRArm1/CATRigRArm2/CATRigRArmPalm/CATRigPalmBone001
+          1
+        weight: 1
+      - path: CATRigBody/CATRigRArm1/CATRigRArm2/CATRigRArmPalm/CATRigPalmBone002
+          1
+        weight: 1
+      - path: CATRigBody/CATRigRLeg1
+        weight: 1
+      - path: CATRigBody/CATRigRLeg1/CATRigRLeg2
+        weight: 1
+      - path: CATRigBody/CATRigRLeg1/CATRigRLeg2/CATRigRLegAnkle
+        weight: 1
+      - path: Sphere001
+        weight: 1
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: FallingAndLand
+      takeName: BeepBoop
+      firstFrame: 80
+      lastFrame: 120
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: CATRigBody
+        weight: 1
+      - path: CATRigBody/CATRigLArm1
+        weight: 1
+      - path: CATRigBody/CATRigLArm1/CATRigLArm2
+        weight: 1
+      - path: CATRigBody/CATRigLArm1/CATRigLArm2/CATRigLArmPalm
+        weight: 1
+      - path: CATRigBody/CATRigLArm1/CATRigLArm2/CATRigLArmPalm/CATRigPalmBone001
+        weight: 1
+      - path: CATRigBody/CATRigLArm1/CATRigLArm2/CATRigLArmPalm/CATRigPalmBone002
+        weight: 1
+      - path: CATRigBody/CATRigLLeg1
+        weight: 1
+      - path: CATRigBody/CATRigLLeg1/CATRigLLeg2
+        weight: 1
+      - path: CATRigBody/CATRigLLeg1/CATRigLLeg2/CATRigLLegAnkle
+        weight: 1
+      - path: CATRigBody/CATRigRArm1
+        weight: 1
+      - path: CATRigBody/CATRigRArm1/CATRigRArm2
+        weight: 1
+      - path: CATRigBody/CATRigRArm1/CATRigRArm2/CATRigRArmPalm
+        weight: 1
+      - path: CATRigBody/CATRigRArm1/CATRigRArm2/CATRigRArmPalm/CATRigPalmBone001
+          1
+        weight: 1
+      - path: CATRigBody/CATRigRArm1/CATRigRArm2/CATRigRArmPalm/CATRigPalmBone002
+          1
+        weight: 1
+      - path: CATRigBody/CATRigRLeg1
+        weight: 1
+      - path: CATRigBody/CATRigRLeg1/CATRigRLeg2
+        weight: 1
+      - path: CATRigBody/CATRigRLeg1/CATRigRLeg2/CATRigRLegAnkle
+        weight: 1
+      - path: Sphere001
+        weight: 1
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: Death
+      takeName: BeepBoop
+      firstFrame: 120
+      lastFrame: 150
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: CATRigBody
+        weight: 1
+      - path: CATRigBody/CATRigLArm1
+        weight: 1
+      - path: CATRigBody/CATRigLArm1/CATRigLArm2
+        weight: 1
+      - path: CATRigBody/CATRigLArm1/CATRigLArm2/CATRigLArmPalm
+        weight: 1
+      - path: CATRigBody/CATRigLArm1/CATRigLArm2/CATRigLArmPalm/CATRigPalmBone001
+        weight: 1
+      - path: CATRigBody/CATRigLArm1/CATRigLArm2/CATRigLArmPalm/CATRigPalmBone002
+        weight: 1
+      - path: CATRigBody/CATRigLLeg1
+        weight: 1
+      - path: CATRigBody/CATRigLLeg1/CATRigLLeg2
+        weight: 1
+      - path: CATRigBody/CATRigLLeg1/CATRigLLeg2/CATRigLLegAnkle
+        weight: 1
+      - path: CATRigBody/CATRigRArm1
+        weight: 1
+      - path: CATRigBody/CATRigRArm1/CATRigRArm2
+        weight: 1
+      - path: CATRigBody/CATRigRArm1/CATRigRArm2/CATRigRArmPalm
+        weight: 1
+      - path: CATRigBody/CATRigRArm1/CATRigRArm2/CATRigRArmPalm/CATRigPalmBone001
+          1
+        weight: 1
+      - path: CATRigBody/CATRigRArm1/CATRigRArm2/CATRigRArmPalm/CATRigPalmBone002
+          1
+        weight: 1
+      - path: CATRigBody/CATRigRLeg1
+        weight: 1
+      - path: CATRigBody/CATRigRLeg1/CATRigRLeg2
+        weight: 1
+      - path: CATRigBody/CATRigRLeg1/CATRigRLeg2/CATRigRLegAnkle
+        weight: 1
+      - path: Sphere001
+        weight: 1
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: Idle
+      takeName: BeepBoop
+      firstFrame: 152
+      lastFrame: 170
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: CATRigBody
+        weight: 1
+      - path: CATRigBody/CATRigLArm1
+        weight: 1
+      - path: CATRigBody/CATRigLArm1/CATRigLArm2
+        weight: 1
+      - path: CATRigBody/CATRigLArm1/CATRigLArm2/CATRigLArmPalm
+        weight: 1
+      - path: CATRigBody/CATRigLArm1/CATRigLArm2/CATRigLArmPalm/CATRigPalmBone001
+        weight: 1
+      - path: CATRigBody/CATRigLArm1/CATRigLArm2/CATRigLArmPalm/CATRigPalmBone002
+        weight: 1
+      - path: CATRigBody/CATRigLLeg1
+        weight: 1
+      - path: CATRigBody/CATRigLLeg1/CATRigLLeg2
+        weight: 1
+      - path: CATRigBody/CATRigLLeg1/CATRigLLeg2/CATRigLLegAnkle
+        weight: 1
+      - path: CATRigBody/CATRigRArm1
+        weight: 1
+      - path: CATRigBody/CATRigRArm1/CATRigRArm2
+        weight: 1
+      - path: CATRigBody/CATRigRArm1/CATRigRArm2/CATRigRArmPalm
+        weight: 1
+      - path: CATRigBody/CATRigRArm1/CATRigRArm2/CATRigRArmPalm/CATRigPalmBone001
+          1
+        weight: 1
+      - path: CATRigBody/CATRigRArm1/CATRigRArm2/CATRigRArmPalm/CATRigPalmBone002
+          1
+        weight: 1
+      - path: CATRigBody/CATRigRLeg1
+        weight: 1
+      - path: CATRigBody/CATRigRLeg1/CATRigRLeg2
+        weight: 1
+      - path: CATRigBody/CATRigRLeg1/CATRigRLeg2/CATRigRLegAnkle
+        weight: 1
+      - path: Sphere001
+        weight: 1
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

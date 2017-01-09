@@ -5,8 +5,9 @@ using UnityEngine.SceneManagement;
 
 public class InfiniteRunnerController : MonoBehaviour {
     private CharacterController controller;
+    private Animator animator;
     private Vector3 moveDirection = Vector3.right;
-    private bool isRunning = false;
+    private bool isRunning = true;
     private Vector3 startPosition;
     private GameObject gameOverPanel;
 
@@ -16,8 +17,9 @@ public class InfiniteRunnerController : MonoBehaviour {
 
     // Use this for initialization
     void Start () {
-        gameOverPanel = GameObject.Find("GameOverPanel");
-        gameOverPanel.SetActive(false);
+        //gameOverPanel = GameObject.Find("GameOverPanel");
+        //gameOverPanel.SetActive(false);
+        animator = gameObject.GetComponent<Animator>();
         controller = gameObject.GetComponent<CharacterController>();
         startPosition = transform.position;
         startRunning();
