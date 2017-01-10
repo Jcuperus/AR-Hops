@@ -7,7 +7,7 @@ public class InfiniteRunnerController : MonoBehaviour {
     private CharacterController controller;
     private Animator animator;
     private Vector3 moveDirection = Vector3.right;
-    private bool isRunning = true;
+    private bool isRunning = false;
     private Vector3 startPosition;
     private GameObject gameOverPanel;
 
@@ -17,8 +17,10 @@ public class InfiniteRunnerController : MonoBehaviour {
 
     // Use this for initialization
     void Start () {
-        //gameOverPanel = GameObject.Find("GameOverPanel");
-        //gameOverPanel.SetActive(false);
+        gameOverPanel = GameObject.Find("GameOverPanel");
+        gameOverPanel.SetActive(false);
+
+        print(gameOverPanel);
         animator = gameObject.GetComponent<Animator>();
         controller = gameObject.GetComponent<CharacterController>();
         startPosition = transform.position;
@@ -28,7 +30,7 @@ public class InfiniteRunnerController : MonoBehaviour {
     void Update()
     {
         //Button input
-        if (Input.GetButton("Jump"))
+        if (Input.GetButton("Jump") && isRunning)
         {
             jump();
         }
@@ -44,6 +46,12 @@ public class InfiniteRunnerController : MonoBehaviour {
             //Making the character move
             controller.Move(moveDirection * Time.deltaTime);
         }
+
+        animator.SetFloat("horizontalVelocity", controller.velocity.y);
+        animator.SetBool("isGrounded", controller.isGrounded);
+        animator.SetBool("isWalking", controller.velocity.x > 0);
+
+        //print("Move direction:" + controller.velocity);
     }
 
     void jump()

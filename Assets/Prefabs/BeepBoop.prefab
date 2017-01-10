@@ -594,7 +594,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 1
-  jumpSpeed: 2
+  jumpSpeed: 3
   gravity: 8
 --- !u!137 &137774140643550626
 SkinnedMeshRenderer:

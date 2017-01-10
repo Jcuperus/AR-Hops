@@ -10,7 +10,7 @@ public class BoardEventHandler : MonoBehaviour, ITrackableEventHandler {
     void Start() {
         mTrackableBehaviour = GetComponent<TrackableBehaviour>();
         tiles = GameObject.FindGameObjectsWithTag("TileTarget");
-        playerController = GameObject.Find("Player").GetComponent<InfiniteRunnerController>();
+        playerController = GameObject.Find("BeepBoop").GetComponent<InfiniteRunnerController>();
         
         if (mTrackableBehaviour) {
             mTrackableBehaviour.RegisterTrackableEventHandler(this);
