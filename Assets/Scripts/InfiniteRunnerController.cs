@@ -10,6 +10,7 @@ public class InfiniteRunnerController : MonoBehaviour {
     private bool isRunning = false;
     private Vector3 startPosition;
     private GameObject gameOverPanel;
+    private AudioSource playerAudio;
 
     public float speed = 1;
     public float jumpSpeed = 2;
@@ -20,7 +21,7 @@ public class InfiniteRunnerController : MonoBehaviour {
         gameOverPanel = GameObject.Find("GameOverPanel");
         gameOverPanel.SetActive(false);
 
-        print(gameOverPanel);
+        playerAudio = gameObject.GetComponent<AudioSource>();
         animator = gameObject.GetComponent<Animator>();
         controller = gameObject.GetComponent<CharacterController>();
         startPosition = transform.position;
@@ -58,6 +59,7 @@ public class InfiniteRunnerController : MonoBehaviour {
     {
         if (controller.isGrounded)
         {
+            playerAudio.Play();
             moveDirection.y = jumpSpeed;
         }
     }
