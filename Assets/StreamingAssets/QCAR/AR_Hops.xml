@@ -1,6 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <QCARConfig xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="qcar_config.xsd">
   <Tracking>
+    <ImageTarget name="Tile_straight_2" size="1.000000 1.000000" />
+    <ImageTarget name="Board_template" size="10.000000 7.071378" />
+    <ImageTarget name="TIle_obstacle_3" size="1.000000 1.000000" />
+    <ImageTarget name="TIle_obstacle_2" size="1.000000 1.000000" />
+    <ImageTarget name="TIle_obstacle_1" size="1.000000 1.000000" />
+    <ImageTarget name="Tile_gap_2" size="1.000000 1.000000" />
+    <ImageTarget name="Tile_gap" size="1.000000 1.000000" />
     <ImageTarget name="ObjectScanningTarget" size="50.000000 35.356991" />
     <ImageTarget name="Tile_straight" size="10.000000 10.000000" />
     <ImageTarget name="test_tile" size="10.000000 10.000000" />
